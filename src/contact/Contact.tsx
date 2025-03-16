@@ -23,30 +23,34 @@ const contactItems = [
 const Contact: React.FC = () => {
   return (
     <section
-      className="bg-slate-700 w-full flex flex-col items-center justify-center p-16"
+      className="dark:bg-slate-700 bg-slate-50 w-full flex flex-col items-center justify-center p-24"
       id="contact"
     >
-      <h2 className="text-gray-200 text-3xl font-bold">Kontakt</h2>
-      <address className="not-italic">
-        <ul className="flex gap-7  text-white mt-6">
-          {contactItems.map((item, index) => (
-            <li key={index} className="flex items-center">
-              <FontAwesomeIcon
-                icon={item.icon}
-                className="text-violet-400 text-xl mr-2"
-              />
-              <a
-                href={item.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-pink-200 font-semibold "
-              >
-                {item.name}
-              </a>
-            </li>
-          ))}
-        </ul>
-      </address>
+      <div className="bg-white rounded-lg shadow-md dark:bg-slate-800 flex flex-col p-7 items-center">
+        <h2 className="dark:text-gray-200 text-slate-800 text-3xl font-bold">
+          Kontakt
+        </h2>
+        <address className="not-italic">
+          <ul className="flex gap-7 dark:text-white  text-slate-700  mt-7">
+            {contactItems.map((item, index) => (
+              <li key={index} className="flex items-center">
+                <FontAwesomeIcon
+                  icon={item.icon}
+                  className="text-violet-400 text-xl mr-2"
+                />
+                <a
+                  href={item.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="dark:hover:text-pink-200 hover:text-pink-600 font-semibold text-md"
+                >
+                  {item.name}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </address>
+      </div>
     </section>
   );
 };
