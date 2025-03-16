@@ -15,11 +15,11 @@ const SingleProject: React.FC<ProjectProps> = ({ item, index }) => {
       key={index}
       className="dark:bg-slate-700 bg-slate-50 w-full h-auto max-w-xs sm:max-w-sm lg:max-w-2xl rounded-lg shadow-md mx-auto overflow-hidden"
     >
-      <div className="bg-white w-full h-50 overflow-hidden ">
+      <div className="bg-white w-full h-40 overflow-hidden ">
         <img
           src={picturePath(item.img)}
           alt="EatWell"
-          className="w-full h-full object-contain"
+          className="w-full h-full object-cover"
         />
       </div>
 
