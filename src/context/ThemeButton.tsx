@@ -9,7 +9,7 @@ const ThemeButton = () => {
   return (
     <button
       onClick={toggleTheme}
-      className="relative w-14 h-8 p-2 rounded-full bg-gray-200 dark:bg-slate-600 transition-colors duration-300"
+      className="relative w-14 h-8 p-2 rounded-full bg-gray-200 dark:bg-slate-600 transition-colors duration-300 ml-auto"
     >
       <span
         className={clsx(

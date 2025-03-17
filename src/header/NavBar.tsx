@@ -118,11 +118,11 @@ const NavBar: React.FC = () => {
 
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="md:hidden text-white focus:outline-none"
+        className="md:hidden text-white focus:outline-none w-10"
       >
         <FontAwesomeIcon
           icon={isOpen ? faXmark : faBars}
-          className="text-pink-400 text-2xl"
+          className="text-pink-400 text-2xl ml-4"
         />
       </button>
 
