@@ -23,7 +23,7 @@ const contactItems = [
 const Contact: React.FC = () => {
   return (
     <section
-      className="dark:bg-slate-700 bg-slate-50 w-full flex flex-col items-center justify-center p-24"
+      className="dark:bg-slate-700 bg-slate-50 w-full flex flex-col items-center justify-center md:p-24 p-12"
       id="contact"
     >
       <div className="bg-white rounded-lg shadow-md dark:bg-slate-800 flex flex-col p-7 items-center">
@@ -31,7 +31,7 @@ const Contact: React.FC = () => {
           Kontakt
         </h2>
         <address className="not-italic">
-          <ul className="flex gap-7 dark:text-white  text-slate-700  mt-7">
+          <ul className="flex-col flex md:flex-row gap-7  dark:text-white  text-slate-700  mt-7">
             {contactItems.map((item, index) => (
               <li key={index} className="flex items-center">
                 <FontAwesomeIcon

@@ -32,12 +32,12 @@ const highlights = [
 const Hero: React.FC = () => {
   return (
     <section
-      className="dark:bg-slate-700 bg-slate-50 w-full h-full flex items-center justify-center"
+      className="dark:bg-slate-700 bg-slate-50 w-full h-full flex items-center justify-center text-center"
       id="about"
     >
-      <div className="my-20 relative py-[2px] px-[2.5px] rounded-lg bg-gradient-to-r from-violet-400 via-red-400 to-pink-400 shadow-lg">
-        <div className="dark:bg-slate-800 bg-white p-10 rounded-lg flex flex-col justify-center items-center gap-7">
-          <div className="flex flex-col justify-center gap-3 items-center">
+      <div className="md:my-20 my-10 relative py-[2px] px-[2.5px] rounded-lg bg-gradient-to-r from-violet-400 via-red-400 to-pink-400 shadow-lg max-w-[80%]">
+        <div className="dark:bg-slate-800 bg-white md:p-10 p-5 rounded-lg flex flex-col justify-center items-center gap-7">
+          <div className="flex flex-col gap-3 ">
             <h2 className="dark:text-gray-200 text-slate-700 text-3xl font-bold">
               Cześć, mam na imię Yana
             </h2>
@@ -51,16 +51,16 @@ const Hero: React.FC = () => {
             </p>
           </div>
 
-          <div className="dark:text-white text-slate-700 grid grid-cols-2 justify-between w-full gap-5 max-w-4xl">
+          <div className="dark:text-white text-slate-700 grid md:grid-cols-2 grid-cols-1 justify-between w-full gap-5 max-w-4xl text-left">
             <div className="rounded-lg border dark:border-gray-600 border-slate-50  p-6 flex flex-col gap-4 shadow-md ">
               <h5 className="font-bold">Tech Stack</h5>
               <ul className="space-y-2">
                 {techStack.map((el, index) => {
                   return (
-                    <li key={index} className="flex items-center">
+                    <li key={index} className="flex items-start">
                       <FontAwesomeIcon
                         icon={getIcon("tech")}
-                        className="text-pink-400 mr-2"
+                        className="text-pink-400 mr-2 mt-1"
                       />
                       {el}
                     </li>
@@ -74,11 +74,11 @@ const Hero: React.FC = () => {
               <ul className="space-y-2">
                 {highlights.map((el, index) => {
                   return (
-                    <li key={index} className="flex items-center">
+                    <li key={index} className="flex items-start">
                       {" "}
                       <FontAwesomeIcon
                         icon={getIcon("highlights")}
-                        className="text-yellow-400 mr-2"
+                        className="text-yellow-400 mr-2 mt-1"
                       />
                       {el}
                     </li>
